@@ -1,6 +1,7 @@
 #!/bin/bash
 
 env
+APP_NAME=demo-app
 BUILD_VERSION=${BUILD_ID:-nobuild}
 BUILD_ROOT=build
 HTML_ROOT=html
@@ -13,5 +14,5 @@ cp -rpv ${HTML_ROOT}/* ${BUILD_ROOT}/var/www/html
 
 echo "building demo-app-${BUILD_ID}.tgz"
 
-tar -C ${BUILD_ROOT}/ -czvf demo-app-${BUILD_VERSION}.tgz .
-tar -tvf demo-app-${BUILD_ID}.tgz
+tar -C ${BUILD_ROOT}/ -czvf ${APP_NAME}-${BUILD_VERSION}.tgz .
+tar -tvf ${APP_NAME}-${BUILD_VERSION}.tgz
