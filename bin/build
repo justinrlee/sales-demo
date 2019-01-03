@@ -5,5 +5,5 @@ BUILD_VERSION=${BUILD_ID}
 
 echo "building demo-app-${BUILD_ID}.tgz"
 
-tar -czvf demo-app-${BUILD_ID}.tgz var
+tar -czvf demo-app-${BUILD_ID}.tgz var usr
 tar -tvf demo-app-${BUILD_ID}.tgz
