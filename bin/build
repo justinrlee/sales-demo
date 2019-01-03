@@ -1,9 +1,17 @@
 #!/bin/bash
 
 env
-BUILD_VERSION=${BUILD_ID}
+BUILD_VERSION=${BUILD_ID:-nobuild}
+BUILD_ROOT=build
+HTML_ROOT=html
+
+mkdir -p ${BUILD_ROOT}/usr/share/nginx/html
+mkdir -p ${BUILD_ROOT}/var/www/html
+
+cp -rpv ${HTML_ROOT}/* ${BUILD_ROOT}/usr/share/nginx/html/
+cp -rpv ${HTML_ROOT}/* ${BUILD_ROOT}/var/www/html
 
 echo "building demo-app-${BUILD_ID}.tgz"
 
-tar -czvf demo-app-${BUILD_ID}.tgz var usr
+tar -C ${BUILD_ROOT}/ -czvf demo-app-${BUILD_ID}.tgz .
 tar -tvf demo-app-${BUILD_ID}.tgz
