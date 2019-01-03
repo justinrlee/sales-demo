@@ -6,6 +6,6 @@ node {
     }
 
     stage("Archive") {
-        archiveArtifacts artifacts: demo-app*.tgz, fingerprint: true
+        archiveArtifacts artifacts: 'demo-app-*.tgz', fingerprint: true
     }
 }
