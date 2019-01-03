@@ -2,6 +2,8 @@
 
 env
 BUILD_VERSION=${BUILD_ID}
-GIT_VERSION=${GIT_COMMIT}
-FULL_TAG=${BUILD_VERSION}-${GIT_VERSION}
-echo "building ${FULL_TAG}.tgz"
+
+echo "building demo-app-${BUILD_ID}.tgz"
+
+tar -czvf demo-app-${BUILD_ID}.tgz var
+tar -tvf demo-app-${BUILD_ID}.tgz
