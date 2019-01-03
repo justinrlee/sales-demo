@@ -13,5 +13,5 @@ cp -rpv ${HTML_ROOT}/* ${BUILD_ROOT}/var/www/html
 
 echo "building demo-app-${BUILD_ID}.tgz"
 
-tar -C ${BUILD_ROOT}/ -czvf demo-app-${BUILD_ID}.tgz .
+tar -C ${BUILD_ROOT}/ -czvf demo-app-${BUILD_VERSION}.tgz .
 tar -tvf demo-app-${BUILD_ID}.tgz
