@@ -8,4 +8,6 @@ node {
     stage("Archive") {
         archiveArtifacts artifacts: 'demo-app-*.tgz', fingerprint: true
     }
+
+    cleanWs()
 }
