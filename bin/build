@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_VERSION=${BUILD_NUMBER}
+GIT_VERSION=${GIT_HASH}
+FULL_TAG=${BUILD_VERSION}-${GIT_VERSION}
+echo "building ${FULL_TAG}.tgz"
