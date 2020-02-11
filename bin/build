@@ -1,6 +1,9 @@
 #!/bin/bash
 
-env
+echo "<h1>Hello world on $(date)</h1>" > html/index.html
+
+cat html/index.html
+
 APP_NAME=demo-app
 BUILD_VERSION=${BUILD_ID:-nobuild}
 BUILD_ROOT=build
